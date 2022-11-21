@@ -1,13 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+
+:root{
+    --azul-dnc: #0c70f2;
+    --preto-dnc: #303030;
+    -cinza-gover: #c9c9c9;
+
+    --fonte-padrao: 'Inter';
+}
+
 body{
     margin: 0px;
     padding: 0px;
+    background: linear-gradient(180deg, rgba(12, 112, 242, 0.5) 20%, rgba(12, 112, 242, 0) 24.84%), #303030;
+    background-repeat: no-repeat;
 }
 
 #principal{
     width: 100%;
     height: 100px;
     border: 1px solid black;
-    background: #303030;
+    background: var(--preto-dnc);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,7 +35,7 @@ body{
 }
 
 #principal div a{
-    font-family: 'Inter';
+    font-family: var(--fonte-padrao);
     font-style: normal;
     font-weight: 600;
     font-size: 25px;
@@ -34,7 +46,7 @@ body{
 }
 
     #principal div a:hover{
-        color: #cccc;
+        color: var(-cinza-gover);
     }
 
 #principal button{
@@ -42,11 +54,111 @@ body{
     width: 80px;
     height: 39px;
     border: 0px;
-    background-color: #0C70F2;
-    font-family: inter;
+    background-color: var(--azul-dnc);
+    font-family: var(--fonte-padrao);
     font-weight: 600;
     font-size: 20px;
     color: #FFFFFF;
     box-shadow: 3px 2px 4px rgba(12, 112, 242, 0.25);
     cursor: pointer;
 }
+
+/* Seção principal do site */
+
+    section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+        header{
+            color: white;
+            font-family: var(--fonte-padrao);
+            
+        }
+
+        header h1{
+            font-size: 80px;
+            font-weight: 800px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        header h2{
+            text-align: center;
+            font-size: 40px;
+            font-weight: 700px;
+            margin-bottom: 150px;
+        }
+        
+        header .invert{
+            background-color: black;
+            font-weight: bold;
+            padding: 5px;
+        }
+        /* formulario */
+        form{
+            color: white;
+            font-family: var(--fonte-padrao);
+            font-size: 30px;
+            font-weight: 600px;
+            width: 600px;
+        }
+        .formGroup{
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        form input{
+            border-radius: 10px;
+            border: 0px;
+            height: 30px;
+            font-size: 20px;
+            padding: 10px;
+            background-color: rgba(255,255,255,0.9);
+        }
+
+        form label{
+            margin:10px 0px 10px 0px;
+        }
+
+        form input::placeholder{
+            color: rgba(57, 57, 57, 0.5);
+            
+        }
+
+        .checkboxItens label{
+            font-size: 25px;
+        }
+
+        .checkboxItens{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        input[type="checkbox"]{
+            transform: scale(1.7);
+        }
+
+        button[type="submit"]{
+            font-family: var(--fonte-padrao);
+            background-color: rgba(12,112,242,0.9);
+            width:100%;
+            height: 56px;
+            border: 0px;
+            font-size: 32px;
+            font-weight: 600px;
+            color:white;
+            margin-top: 55px;
+            border-radius: 10px;
+            box-shadow: 0px 6px 4px rgba(12, 112, 242, 0.25);
+            cursor: pointer;
+        }
